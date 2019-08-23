@@ -17,14 +17,14 @@ class ApplicationController < ActionController::Base
     campaign_ended = Rails.application.config.ended
     return if campaign_ended || !params[:ref]
 
-    unless User.find_by_referral_code(params[:ref]).nil?
+    unless User.find_by(referral_code: params[:ref]).nil?
       h_ref = { value: params[:ref], expires: 1.week.from_now }
       cookies[:h_ref] = h_ref
     end
 
     user_agent = request.env['HTTP_USER_AGENT']
     return unless user_agent && !user_agent.include?('facebookexternalhit/1.1')
-    redirect_to proc { url_for(params.except(:ref)) }
+    redirect_to proc { url_for(params.permit(:ref).except(:ref)) }
   end
   
   def flatten_errors errors
