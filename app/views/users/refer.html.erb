@@ -17,7 +17,7 @@
           <input class="input" id="share-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly><button class="btn-copy" onclick="copy()">COPY</button>
         </p>
         <p class="social-share">
-          <% twitter_message = "Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit." %>  
+          <% twitter_message = "CLICK 2 WIN a chance to receive a free LTHR pre-order!" %>  
           <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=LTHR" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
           <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-tw.svg') %>" alt="Share on Twitter" /></a>
         </p>                                                                           
@@ -38,46 +38,57 @@
           <img class="step-img" src="<%= asset_path('step1.png') %>" srcset="<%= asset_path('step1-2x.png') %>" alt="Step 1">
           <div class="step-body">
             <h2 class="step-title">5 FRIENDS</h2>
-            <p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="step-content">One LTHR Shaving Pod</p>
           </div>
         </div>
         <div class="col-md-3 text-center step">
           <img class="step-img" src="<%= asset_path('step2.png') %>" srcset="<%= asset_path('step2-2x.png') %>" alt="Step 2">
           <div class="step-body">
             <h2 class="step-title">10 FRIENDS</h2>
-            <p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="step-content">3 LTHR Shaving Pods</p>
           </div>
         </div>    
         <div class="col-md-3 text-center step">
           <img class="step-img" src="<%= asset_path('step3.png') %>" srcset="<%= asset_path('step3-2x.png') %>" alt="Step 3">
           <div class="step-body">
             <h2 class="step-title">15 FRIENDS</h2>
-            <p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="step-content">Safety Razor + 5pk Blades</p>
           </div>
         </div>   
         <div class="col-md-3 text-center step">
           <img class="step-img" src="<%= asset_path('step4.png') %>" srcset="<%= asset_path('step4-2x.png') %>" alt="Step 4">
           <div class="step-body">
             <h2 class="step-title">20 FRIENDS</h2>
-            <p class="step-content">Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p class="step-content">Free LTHR Pre-Order With 1 Shaving Pod</p>
           </div>
         </div>  
       </div>
       <div class="row">
         <p class="step-extra-content">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit consectetur elit, at eleifend felis consequat eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse tristique fermentum viverra. Cras varius ac mauris ut porttitor. Donec in posuere nunc. Nullam pulvinar libero vel nunc sagittis, ac consequat orci imperdiet. Ut tincidunt, magna sed lobortis pharetra, mauris diam suscipit nisl, lobortis finibus nulla tortor a diam. Suspendisse ipsum eros, bibendum a elit non, fermentum aliquet odio.
-          <br><br>
-          Sed aliquet diam vitae tellus molestie, at ornare dolor hendrerit. Pellentesque bibendum volutpat blandit. Proin placerat semper nibh id dapibus. Proin id ante ac urna fermentum condimentum nec et elit. Donec vel libero justo. Sed volutpat porta quam at tempus. Morbi quis elit vitae felis faucibus elementum. Donec felis diam, scelerisque et tortor a, sodales imperdiet mi. Proin sagittis est nibh, rutrum tristique neque condimentum sed.
-          <br><br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
-          Duis ornare nulla a magna laoreet, eget condimentum nunc pellentesque.<br>
-          Quisque aliquet quam vel magna placerat auctor.<br>
-          Nulla porttitor magna quis aliquam facilisis.<br>
+          Who doesn’t have 5-10 friends that shave? Enter to win a chance to receive a free LTHR pre-order! It's as easy as sending out a quick email with your custom link to a few friends or sharing on social using the links above. Each one of your referrals that comes to the site and enters their email will give you credit towards the above milestones.
         </p>
       </div>
+      <div class="row">
+        <%
+          words = ''
+          referrals_count = @user.referrals.count
+          if referrals_count == 1
+            words = 'friend has'
+          elsif
+            words = 'friends have'
+          end
+        %>
+        <% if referrals_count == 0 %>
+          <h2 class="step-title">No friends have joined...Yet!</h2>
+        <% else %>
+          <h2 class="step-title"><%= referrals_count %><%= words %> joined</h2>
+        <% end %>        
+      </div>      
     </div>
   </div>
   <!-- Steps End -->
+
+  
 
   <!-- Come Inside Start -->
   <div class="container-fluid come-inside">

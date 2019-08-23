@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def signup_email(user)
     @user = user
-    @twitter_message = "Earn: Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    @twitter_message = "CLICK 2 WIN a chance to receive a free LTHR pre-order!"
 
     mail(:to => user.email, :subject => "Thanks for signing up!")
   end
