@@ -1,33 +1,52 @@
-<!-- Header -->
-<style>
-    body{
-      background:#fff; color:#000;
-    }
-</style>
-<div class="container-fluid thankyouheaderbg">
-  <div class="row">
-    <div class="container">
-      <div class="col-md-6 col-xs-12 leftbox" style="padding-top:15px;">  
-
+<section class="background-dark">
+  <div class="container-principal">
+    <div class="container-body">
+      <div class="content">
+      
+      <div class="content-left">
+          <div class="formbox">
+            <p class="form-title">A barbershop quality shave in the comfort of your own home.</p>
+            <div class="play-action">
+              <a href="javascript: void(0);" data-toggle="modal" data-target="#myModal">
+                <img src="/assets/ic-arrow-drop-down-circle-2.svg" alt="See It In Action">
+                <p>See It In Action</p>
+              </a> 
+            </div>
+          </div>
+        </div>
+        <div class="content-right">  
+          <img src="/assets/producto.png" srcset="/assets/producto@2x.png 2x" alt="LTHR" />
+        </div>
       </div>		
-      <div class="col-md-5 col-xs-12 rightbox">  
-        <p class="title-thankyou">THANK YOU FOR SIGNING UP <br>AND REMEMBER…</p>
-        <p class="subtitle-thankyou">Share your unique link below via email or social media to earn free products depending on how many friends enter their email address.</p>                                                   
-        <p class="share-link">
-          <input class="input" id="share-link" type="text" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly><button class="btn-copy" onclick="copy()">COPY</button>
-        </p>
+    </div>
+  </div>
+  
+</section>
+<section class="invite">
+  <div class="container-principal">
+    <div class="content-left">
+      <img src="/assets/hombre-cn-barba.png" srcset="/assets/hombre-cn-barba@2x.png 2x" alt="LTHR" />
+    </div>
+    <div class="content-right">  
+      <div class="formbox">
+        <p class="form-title">INVITE A FRIEND &
+            EARN PRODUCTS</p>
+                                
+        <form class="form-inline" action="#" method="post">
+          <input type="text" placeholder="Link-to-share" id="share-link" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly>
+          <button class="btn lima" onclick="copy()" type="button">COPY</button>
+        </form>
+        <p>share on social</p>
         <p class="social-share">
           <% twitter_message = "CLICK 2 WIN a chance to receive a free LTHR pre-order!" %>  
           <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=LTHR" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
-          <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-tw.svg') %>" alt="Share on Twitter" /></a>
-        </p>                                                                           
-      </div>                       
-    </div>		
+          <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-tw.svg') %>" alt="Share on Twitter" /></a>          
+        </p>
+      </div>
+    </div>
   </div>
-</div>
-<!-- Header End -->
-
-  <!-- Steps Start -->
+</section>
+<section>
   <div class="container-fluid">
     <div class="container steps">
       <div class="row">
@@ -35,30 +54,30 @@
       </div>
       <div class="row steps-body">
         <div class="col-md-3 text-center step">
-          <img class="step-img" src="<%= asset_path('step1.png') %>" srcset="<%= asset_path('step1-2x.png') %>" alt="Step 1">
+          <img class="step-img" src="/assets/step1.png" srcset="/assets/step1-2x.png 2x" alt="Step 1">
           <div class="step-body">
             <h2 class="step-title">5 FRIENDS</h2>
             <p class="step-content">One LTHR Shaving Pod</p>
           </div>
         </div>
         <div class="col-md-3 text-center step">
-          <img class="step-img" src="<%= asset_path('step2.png') %>" srcset="<%= asset_path('step2-2x.png') %>" alt="Step 2">
+          <img class="step-img" src="/assets/step2.png" srcset="/assets/step2-2x.png 2x" alt="Step 2">
           <div class="step-body">
             <h2 class="step-title">10 FRIENDS</h2>
             <p class="step-content">3 LTHR Shaving Pods</p>
           </div>
         </div>    
         <div class="col-md-3 text-center step">
-          <img class="step-img" src="<%= asset_path('step3.png') %>" srcset="<%= asset_path('step3-2x.png') %>" alt="Step 3">
+          <img class="step-img" src="/assets/step3.png" srcset="/assets/step3-2x.png 2x" alt="Step 3">
           <div class="step-body">
-            <h2 class="step-title">15 FRIENDS</h2>
+            <h2 class="step-title">25 FRIENDS</h2>
             <p class="step-content">Safety Razor + 5pk Blades</p>
           </div>
         </div>   
         <div class="col-md-3 text-center step">
-          <img class="step-img" src="<%= asset_path('step4.png') %>" srcset="<%= asset_path('step4-2x.png') %>" alt="Step 4">
+          <img class="step-img" src="/assets/step4.png" srcset="/assets/step4-2x.png 2x" alt="Step 4">
           <div class="step-body">
-            <h2 class="step-title">20 FRIENDS</h2>
+            <h2 class="step-title">50 FRIENDS</h2>
             <p class="step-content">Free LTHR Pre-Order With 1 Shaving Pod</p>
           </div>
         </div>  
@@ -83,47 +102,37 @@
         <% else %>
           <h2 class="step-title"><%= referrals_count %> <%= words %> joined</h2>
         <% end %>        
-      </div>      
+      </div>
     </div>
   </div>
-  <!-- Steps End -->
-
-  
-
-  <!-- Come Inside Start -->
+</section>
+<section class="footer">
   <div class="container-fluid come-inside">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">	
-          <p class="title-come-inside">Come Inside To Pre-Order</p>
-
-          <p class="subtitle-come-inside">& Have The Chance To Win A Free LTHR!</p>
-          <form class="form-come-inside">
-            <input class="input email-come-inside" type="email" placeholder="Email">
-            <button class="btn lima btn-send">Come Inside To Learn More</button>
-          </form>
+          <div class="formbox">
+            <p class="form-title">INVITE A FRIEND &
+                EARN PRODUCTS</p>
+                                    
+            <form class="form-inline" action="#" method="post">
+              <input type="text" placeholder="Link-to-share" id="share-link" value="<%= root_url %>?ref=<%= @user.referral_code %>" readonly>
+              <button class="btn lima" onclick="copy()" type="button">COPY</button>
+            </form>
+            <p>share on social</p>
+            <p class="social-share">
+              <% twitter_message = "CLICK 2 WIN a chance to receive a free LTHR pre-order!" %>  
+              <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=LTHR" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
+              <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-tw.svg') %>" alt="Share on Twitter" /></a> 
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- End Come Inside -->
+</section>
+<%= render 'video_modal' %>
 
-  <!-- Footer Start -->
-  <div class="container-fluid footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 col-xs-12 text-center">	
-          <p class="social-share-footer">
-            <a target="_blank" href="https://www.facebook.com/"><img src="<%= asset_path('logo-fb-1.svg') %>" alt="Share on Facebook"></a> 
-            <a target="_blank"  href="https://twitter.com/"><img src="<%= asset_path('logo-tw-1.svg') %>" alt="Share on Instagram"></a>
-            <a target="_blank" href="https://www.instagram.com/"><img src="<%= asset_path('logo-insta-1.svg') %>" alt="Share on Twitter"></a>
-            <a target="_blank" href="https://www.youtube.com/"><img src="<%= asset_path('logo-youtube.svg') %>" alt="Share on Youtube" width="37"></a> 
-          </p> 
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Footer End -->
 <script>
 function copy() {
   /* Get the text field */

@@ -1,29 +1,194 @@
-<!-- Form Start -->               
-<div class="container-fluid homeheaderbg2">
-  <div class="container">  
-    <div class="row">                                                    
-      <div class="form2">
-        <div class="photo">
-          <img src="<%= asset_path('image-popup.png') %>" alt="LTHR" />
-        </div>
-        <div class="formbox">
-          <div class="content-close"><button class="btn-close">X</button></div>
-          <div class="head-formbox">
-            <p><img src="<%= asset_path('lthr.svg') %>" alt="LTHR"/></p>
-          </div>       
-          <div class="content-formbox">
-            <p class="popup-title">BE THE FIRST TO KNOW </p>
-            <p class="popup-subtitle">About new products, events and more...</p>            
-            <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-inline"} do |f| %>
-              <%= f.text_field :first_name, :placeholder => "Enter First Name", :class => "emailbox2" %> <br> 
-              <%= f.text_field :email, :placeholder => "Enter Email", :class => "emailbox2" %> <br> 
-              <input class="btn lima" type="submit" value="STEP INSIDE" />
+<!-- Form Start -->    
+<section class="background-grey">
+  <div class="container-principal">
+    <div class="container-body">
+      <div class="content">
+        <div class="content-left">
+          <div class="formbox">
+            <p class="form-title">The best shave You’ve Ever Had!</p>
+            <p class="form-subtitle"> Enter to win a free LTHR now!</p>
+            <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-body"} do |f| %>
+              <%= f.text_field :email, :placeholder => "Email" %>
+              <input class="btn lima" type="submit" value="Come Inside To Learn More" />
             <% end %>
-          </div> 
-        </div>  
-        <div class="clearfix"></div>  
+            <div class="play-action">
+              <a href="javascript: void(0);" data-toggle="modal" data-target="#myModal">
+                <img src="/assets/ic-arrow-drop-down-circle-2.svg" alt="See It In Action">
+                <p>See It In Action</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="content-right">
+          <img src="/assets/group-2.png" srcset="/assets/group-2@2x.png 2x" alt="LTHR" />
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+<!-- Form End --> 
+<section>
+  <div class="container-fluid">
+    <div class="container why-better">
+      <div class="row">
+        <h2 class="why-better-header text-center">Why hot shave is better?</h2>
+      </div>
+      <div class="row why-better-body">
+        <div class="col-md-4 text-center better">
+          <img class="better-img" src="/assets/007-shave.svg">
+          <div class="better-body">
+            <h2 class="better-title">Feel Great</h2>
+            <p class="better-content">Hot Lather Has Been A Signature Of The <br>Barbershop Shave For Generations.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center better">
+          <img class="better-img" src="/assets/008-face.svg">
+          <div class="better-body">
+            <h2 class="better-title">Look Great</h2>
+            <p class="better-content">Reduces Shaving Irritation To Keep <br>You Looking Sharp.</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center better">
+          <img class="better-img" src="/assets/013-leaf.svg">
+          <div class="better-body">
+            <h2 class="better-title">Smell Great</h2>
+            <p class="better-content">Hand-Crafted with Premium Scents <br>To Keep You Smelling Fresh.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<!-- Form End -->  
+</section>
+<section class="reviews">
+  <div class="container-fluid">
+    <div class="container why-better">
+      <div class="row">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+          <div class="item">
+            <div class="review-container">
+              <img class="review-img" src="/assets/rating.svg">
+              <p class="review-content">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a facilisis
+                nulla, sed lacus. Morbi a leo sapien. Mauris pharetra enim id mi ornare, eget faucibus quam aliquet.
+                Aenean vitae molestie enim, at gravida est. Duis nec nibh a ligula auctor dignissim id eget velit.
+                Vivamus ut semper nibh. Morbi lacus metus, vulputate non egestas id, euismod non eros.”</p>
+              <h5 class="review-name">Aliquam Phasellus</h5>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render 'video_modal' %>
