@@ -5,3 +5,9 @@
 @import "styles";
 @import "less";
 @import "toastr";
+
+input.form--f--input {
+	border-radius: 6px !important;
+  margin-bottom: 14px !important;
+  max-width: none !important;
+}

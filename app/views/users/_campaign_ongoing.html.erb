@@ -1,20 +1,20 @@
 <!-- Form Start -->    
-<section class="background-grey">
+<section class="background-grey bg-dark">
   <div class="container-principal">
     <div class="container-body">
       <div class="content">
         <div class="content-left">
-          <div class="formbox">
-            <p class="form-title">The best shave You’ve Ever Had!</p>
+          <div class="formbox formbox-index">
+            <p class="form-title white">The best shave You’ve Ever Had!</p>
             <p class="form-subtitle"> Enter to win a free LTHR now!</p>
             <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-body"} do |f| %>
               <%= f.text_field :email, :placeholder => "Email" %>
-              <input class="btn lima" type="submit" value="Come Inside To Learn More" />
+              <input class="btn lima" type="submit" value="Come Inside & Be The First To Know" />
             <% end %>
             <div class="play-action">
-              <a href="javascript: void(0);" data-toggle="modal" data-target="#myModal">
+              <a href="javascript: void(0);" class="play">
                 <img src="/assets/ic-arrow-drop-down-circle-2.svg" alt="See It In Action">
-                <p>See It In Action</p>
+                <p class="white">See It In Action</p>
               </a>
             </div>
           </div>
@@ -30,36 +30,58 @@
 <section>
   <div class="container-fluid">
     <div class="container why-better">
-      <div class="row">
-        <h2 class="why-better-header text-center">Why hot shave is better?</h2>
-      </div>
-      <div class="row why-better-body">
-        <div class="col-md-4 text-center better">
-          <img class="better-img" src="/assets/007-shave.svg">
-          <div class="better-body">
-            <h2 class="better-title">Feel Great</h2>
-            <p class="better-content">Hot Lather Has Been A Signature Of The <br>Barbershop Shave For Generations.</p>
-          </div>
-        </div>
-        <div class="col-md-4 text-center better">
+      <div class="row why-better-body reverse">
+        <div class="container-icons col-sm-6 col-lg-3 text-center better">
           <img class="better-img" src="/assets/008-face.svg">
           <div class="better-body">
-            <h2 class="better-title">Look Great</h2>
-            <p class="better-content">Reduces Shaving Irritation To Keep <br>You Looking Sharp.</p>
+            <h2 class="better-title double">Hot Lather</h2>
+            <p class="better-content">Opens Up Your Pores & Softens The Hair On Your Face, Making It Easier To Cut &
+              Reducing Irritation.</p>
           </div>
         </div>
-        <div class="col-md-4 text-center better">
+        <div class="container-icons col-sm-6 col-lg-3 col-small text-center better">
+          <img class="better-img" src="/assets/003-antenna.svg">
+          <div class="better-body">
+            <h2 class="better-title double">Wireless</h2>
+            <p class="better-content">LTHR Is The First-Ever Wireless Hot Lather Dispenser.</p>
+          </div>
+        </div>
+        <div class="container-icons col-sm-6 col-lg-3 col-small text-center better">
           <img class="better-img" src="/assets/013-leaf.svg">
           <div class="better-body">
-            <h2 class="better-title">Smell Great</h2>
-            <p class="better-content">Hand-Crafted with Premium Scents <br>To Keep You Smelling Fresh.</p>
+            <h2 class="better-title">Premium<br>Scents</h2>
+            <p class="better-content">Hand-Crafted With Premium Scents To Keep You Smelling Fresh.</p>
           </div>
+        </div>
+        <div class="container-icons col-sm-6 col-lg-3 col-large text-center better">
+          <img class="better-img" src="/assets/001-razor.svg">
+          <div class="better-body">
+            <h2 class="better-title">Master Barber<br>Backed</h2>
+            <p class="better-content">It's Not Another Blade, Vibrating Razor, Or Some Weird Blue Shaving Gel, It's
+              Proven Science That Has Been Backed By Barbers For Hundreds Of Years.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row about-lthr">
+        <div class="col-lg-12">
+          <h2 class="why-better-header text-center">About LTHR</h2>
+          <p class="step-extra-content">
+            LTHR is on a mission to create a luxury shaving experience for guys everywhere. Created by long-time
+            master barbers, LTHR was designed to bring the benefits of hot lather from the barbershop to your
+            bathroom. Hot lather opens up your pores and softens the hair on your face, making it easier to cut and
+            reducing irritation.
+            <br><br>
+            It's not another blade, vibrating razor, or some weird blue shaving gel, it's proven science that has been
+            backed by barbers for hundreds of years. LTHR is the first of its kind wireless hot lather dispenser and
+            pumps out foam at 135 degrees. Once on your face, the lather stays over 110 degrees for 90 seconds, giving
+            you the perfect shave and elevating your routine. 
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--<section class="reviews">
+  <!--<section class="reviews">
   <div class="container-fluid">
     <div class="container why-better">
       <div class="row">
@@ -190,5 +212,27 @@
     </div>
   </div>
 </section>-->
+
+<section class="footer">
+  <div class="container-fluid come-inside">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-12 text-center">
+          <div class="formbox">
+            <p class="form-title">Enter To Win A Free LTHR Now!</p>
+            <p class="form-subtitle">Elevate Your Shaving Routine</p>
+
+
+            <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-body"} do |f| %>
+              <%= f.text_field :email, :placeholder => "Email", class: 'form--f--input' %>
+              <input class="btn lima full-width" type="submit" value="Come Inside & Be The First To Know" />
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <%= render 'video_modal' %>
