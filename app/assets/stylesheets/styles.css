@@ -132,17 +132,17 @@ header {
 	max-width: 1110px;
 	margin: 0 auto;
 	padding: 24px 0px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
+	/*display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;*/
 }
 
 header .preorder-now {
@@ -172,14 +172,17 @@ header .preorder-now>a {
 
 .logo {
 	width: 100%;
-	max-width: 106px;
+	max-width: 100px;
+	display: inline-block;
 }
 
 .menu-text-right {
-	float: right;
+	text-align: right;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin-bottom: 0px;
+	display: inline-block;
+	width: calc(100% - 106px);
 }
 
 .play-action {
@@ -314,7 +317,7 @@ img {
 	font-style: normal;
 	font-stretch: normal;
 	line-height: normal;
-	letter-spacing: 2.86px;
+	letter-spacing: 2.5px;
 	color: #ffffff;
 	text-transform: uppercase;
 }
@@ -478,6 +481,7 @@ img {
 	margin: 40px auto;
 	letter-spacing: 1px;
 	line-height: 1.71;
+	white-space: normal;
 }
 
 .topbg {
@@ -823,6 +827,12 @@ img {
 	.background-grey .play-action p {
 		font-size: 11px;
 		letter-spacing: 1.5px;
+	}
+
+	.footer .formbox .lima {
+		font-size: 11px;
+		padding: 10px;
+		letter-spacing: 1px;
 	}
 }
 

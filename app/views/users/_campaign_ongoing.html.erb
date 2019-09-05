@@ -222,7 +222,6 @@
             <p class="form-title">Enter To Win A Free LTHR Now!</p>
             <p class="form-subtitle">Elevate Your Shaving Routine</p>
 
-
             <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-body"} do |f| %>
               <%= f.text_field :email, :placeholder => "Email", class: 'form--f--input' %>
               <input class="btn lima full-width" type="submit" value="Come Inside & Be The First To Know" />
