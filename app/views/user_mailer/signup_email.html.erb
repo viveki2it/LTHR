@@ -28,7 +28,7 @@
           <tr>
             <td style="padding: 54px 0 27px;">
               <center>
-                <img align="bottom" alt="Company Logo" border="0" src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/lthr.png"
+                <img align="bottom" alt="Company Logo" border="0" src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/logo-lthr.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/logo-lthr-2x.png 2x"
                   style="margin: 0; margin-right: 0px; margin-left: 0px; padding: 0; background: none; border: none; white-space: normal; line-height: normal;"
                   title="Company Logo" width="100" />
               </center>
@@ -74,12 +74,12 @@
                 <tr>
                   <td width="80" align="center">
                     <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(Rails.application.config.action_mailer.default_url_options[:host] || "") %>?ref=<%= CGI::escape(@user.referral_code) %>&title=LTHR" style="outline: 0; border: 0;" target="_blank">
-                      <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/logo-fb.png" alt="Share on Facebook" style="display: block; margin: 0; padding: 0; border: 0;">
+                      <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/logo-fb-1.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/logo-fb-2x.png 2x" alt="Share on Facebook" style="display: block; margin: 0; padding: 0; border: 0;">
                     </a>
                   </td>
                   <td width="80" align="center">
                     <a href="http://twitter.com/share?url=<%= CGI::escape(Rails.application.config.action_mailer.default_url_options[:host] || "") %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(@twitter_message) %>" style="outline: 0; border: 0;" target="_blank">
-                      <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/logo-tw.png" alt="Share on Twitter" style="display: block; margin: 0; padding: 0; border: 0;">
+                      <img src="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/logo-tw-1.png" srcset="<%= Rails.application.config.action_mailer.default_url_options[:host] %>assets/email/logo-tw-2x.png 2x" alt="Share on Twitter" style="display: block; margin: 0; padding: 0; border: 0;">
                     </a>
                   </td>
                 </tr>
