@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def ref_to_cookie
+    @experiment ||= ab_test(:my_page, ["https://lthrshaving.com/cart/28670272012340:1", "https://lthrshaving.com/cart/29407041486900:1", "https://lthrshaving.com/cart/29407049023540:1"])
     campaign_ended = Rails.application.config.ended
     return if campaign_ended || !params[:ref]
 
