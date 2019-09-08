@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Split::Dashboard, at: '/split'  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -13,6 +14,5 @@ Rails.application.routes.draw do
   unless Rails.application.config.consider_all_requests_local
     get '*not_found', to: 'users#redirect', :format => false
   end
-  mount Split::Dashboard, at: '/split'  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
