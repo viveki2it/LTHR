@@ -41,7 +41,7 @@
 $(document).ready(function () {
     $('.play').click(function (e) {
         e.preventDefault();
-        var video = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/HcL-2Of-0x0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>';
+        var video = '<iframe width="100%" height="100%" src="https://youtu.be/jq1cVAib-Oc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" frameborder="0" allowfullscreen></iframe>';
         $('.video-wrapper').html(video);
         $('.pop-up').show();
         $('.pop-up').addClass("show-pop");
