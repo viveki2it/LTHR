@@ -193,23 +193,25 @@
               </center>
             </td>
           </tr>
-        </table>
-
-        <table style="margin: 0 auto; padding: 0; width: 651px; font-family: 'Helvetica Neue-Light', 'Helvetica Neue Light', 'Helvetica Neue', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 0; color: #CCC; font-weight: normal; background: white; text-align: center;" width='651' cellspacing='0' cellpadding='0' align="center" bgcolor="#FFFFFF">
           <tr>
-            <td style="padding:2px 80px 50px 80px;">
+            <td style="padding:2px 80px 0px 80px;">
               <center>
-                <p style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 13px; color: #3d3d3d; text-align: center; letter-spacing: 0.93px;">
-                  <span style="font-size: 14px;">Share the link below with friends to earn rewards</span> <br/>
-                  Share Link: <br/><br/>
-                  <a href="<%= Rails.application.config.action_mailer.default_url_options[:host] || "" %>?ref=<%= @user.referral_code %>" style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 13px; color: #3d3d3d; text-align: center; letter-spacing: 0.93px;" target="_blank"><%= Rails.application.config.action_mailer.default_url_options[:host] || "" %>?ref=<%= @user.referral_code %></a><br/><br/>
-                  <span style="font-size: 14px;">To view how many referrals you have at any time, click the link below</span> <br/>
-                  View Link: <br/><br/>
-                  <%= link_to @user.user_url(root_url), @user.user_url(root_url), :style => "font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 13px; color: #3d3d3d; text-align: center; letter-spacing: 0.93px;", 'target' => "_blank" %>
-                </p>              
+                <p
+                  style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 13px; color: #3d3d3d; text-align: center; letter-spacing: 0.93px; margin-bottom: 20px;">
+                  Share the link below with friends to earn rewards<br>
+                  Share Link:
+                </p>
+                <a href='<%= Rails.application.config.action_mailer.default_url_options[:host] || "" %>?ref=<%= @user.referral_code %>'
+                  style='border-radius: 6px; text-transform: uppercase; background-color: #4fd1a8; color: #fff; font-weight: bold; padding: 10px; letter-spacing: 2px; outline: none; border-color: transparent; font-size: 13px; margin-bottom: 10px; display: inline-block; text-decoration: none' target="_blank">Link</a>
+                <p
+                  style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 13px; color: #3d3d3d; text-align: center; letter-spacing: 0.93px; margin-bottom: 20px;">
+                  To view how many heferrals you have at any time, click the link below<br>
+                  View Link: 
+                </p>
+                <%= link_to "Link", @user.user_url(root_url), :style => "border-radius: 6px; text-transform: uppercase; background-color: #4fd1a8; color: #fff; font-weight: bold; padding: 10px; letter-spacing: 2px; outline: none; border-color: transparent; font-size: 13px; margin-bottom: 40px; display: inline-block; text-decoration: none;", 'target' => "_blank" %>
               </center>
             </td>
-          </tr>
+          </tr>          
         </table>
 
         <table
