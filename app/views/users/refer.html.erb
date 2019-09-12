@@ -38,7 +38,7 @@
         </form>
         <p>share on social</p>
         <p class="social-share">
-          <% twitter_message = "Ready to elevate your shave? Limited-time chance to win a @LTHR hot shaving machine! (#{ENV['DEFAULT_MAILER_HOST']})" %>  
+          <% twitter_message = "Ready to elevate your shave? Here is your limited-time chance to win a pre-order LTHR hot shaving machine!" %>  
           <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=LTHR" target="_blank"><img src="<%= asset_path('logo-fb.svg') %>" alt="Share on Facebook" /></a> 
           <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><img src="<%= asset_path('logo-tw.svg') %>" alt="Share on Twitter" /></a>          
         </p>
