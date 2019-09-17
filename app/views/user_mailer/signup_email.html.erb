@@ -166,13 +166,13 @@
                   Share Link:
                 </p>
                 <a href='<%= Rails.application.config.action_mailer.default_url_options[:host] || "" %>?ref=<%= @user.referral_code %>'
-                  style='border-radius: 6px; text-transform: uppercase; background-color: #4fd1a8; color: #fff; font-weight: bold; padding: 10px; letter-spacing: 2px; outline: none; border-color: transparent; font-size: 13px; margin-bottom: 10px; display: inline-block; text-decoration: none' target="_blank">Link</a>
+                  style='border-radius: 6px; text-transform: uppercase; background-color: #4fd1a8; color: #fff; font-weight: bold; padding: 10px; letter-spacing: 2px; outline: none; border-color: transparent; font-size: 13px; margin-bottom: 10px; display: inline-block; text-decoration: none' target="_blank">Share with Friends!</a>
                 <p
                   style="font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', serif; font-size: 13px; color: #3d3d3d; text-align: center; letter-spacing: 0.93px; margin-bottom: 20px;">
-                  To view how many heferrals you have at any time, click the link below<br>
+                  To view how many referrals you have at any time, click the link below<br>
                   View Link: 
                 </p>
-                <%= link_to "Link", @user.user_url(root_url), :style => "border-radius: 6px; text-transform: uppercase; background-color: #4fd1a8; color: #fff; font-weight: bold; padding: 10px; letter-spacing: 2px; outline: none; border-color: transparent; font-size: 13px; margin-bottom: 40px; display: inline-block; text-decoration: none;", 'target' => "_blank" %>
+                <%= link_to "# of Referrals Received", @user.user_url(root_url), :style => "border-radius: 6px; text-transform: uppercase; background-color: #4fd1a8; color: #fff; font-weight: bold; padding: 10px; letter-spacing: 2px; outline: none; border-color: transparent; font-size: 13px; margin-bottom: 40px; display: inline-block; text-decoration: none;", 'target' => "_blank" %>
               </center>
             </td>
           </tr>          
