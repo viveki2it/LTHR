@@ -97,6 +97,7 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
+    connection_pool (2.2.2)
     crass (1.0.4)
     delayed_job (4.1.7)
       activesupport (>= 3.0, < 5.3)
@@ -239,6 +240,11 @@ GEM
     selenium-webdriver (3.142.3)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
+    sidekiq (6.0.0)
+      connection_pool (>= 2.2.2)
+      rack (>= 2.0.0)
+      rack-protection (>= 2.0.0)
+      redis (>= 4.1.0)
     simple-random (1.0.3)
     sinatra (2.0.7)
       mustermann (~> 1.0)
@@ -310,6 +316,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sassc-rails (>= 2.1.0)
   selenium-webdriver
+  sidekiq
   split
   spring
   spring-watcher-listen (~> 2.0.0)
