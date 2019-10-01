@@ -1,8 +1,9 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
   mount Split::Dashboard, at: '/split'  
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-
+  mount Sidekiq::Web, at: '/sidekiq', as: 'sidekiq'
   root :to => "users#new"
 
   post 'users/create' => 'users#create'
