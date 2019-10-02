@@ -93,21 +93,21 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   config.action_mailer.default_url_options = { :host => ENV['DEFAULT_MAILER_HOST'] }
   config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   :address              => "smtp.gmail.com",
-  #   :port                 => 587,
-  #   #:domain               => 'baci.lindsaar.net',
-  #   :user_name            => ENV['CONFIG_EMAIL'],
-  #   :password             => ENV['CONFIG_PASSWORD'],
-  #   :authentication       => 'plain',
-  #   :enable_starttls_auto => true
-  # }  
-  ActionMailer::Base.smtp_settings = {
-    :port           => ENV['MAILGUN_SMTP_PORT'],
-    :address        => ENV['MAILGUN_SMTP_SERVER'],
-    :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
-    :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => 'friends.lthrshaving.com',
-    :authentication => :plain,
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    #:domain               => 'baci.lindsaar.net',
+    :user_name            => ENV['CONFIG_EMAIL'],
+    :password             => ENV['CONFIG_PASSWORD'],
+    :authentication       => :plain,
+    :enable_starttls_auto => true
   }  
+  # ActionMailer::Base.smtp_settings = {
+  #   :port           => ENV['MAILGUN_SMTP_PORT'],
+  #   :address        => ENV['MAILGUN_SMTP_SERVER'],
+  #   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  #   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  #   :domain         => 'friends.lthrshaving.com',
+  #   :authentication => :plain,
+  # }  
 end
