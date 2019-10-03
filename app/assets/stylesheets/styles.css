@@ -50,6 +50,12 @@ body {
 	background-size: cover;
 }
 
+.hero--video {
+	max-width: 100%;
+  height: auto;
+  position: fixed;
+}
+
 .container-principal {
 	max-width: 1110px;
 	margin: 0 auto;
@@ -256,10 +262,12 @@ header .preorder-now>a {
 
 .content-left {
 	width: 50%;
+	z-index: 9999;
 }
 
 .content-right {
 	width: 50%;
+	z-index: 9999;
 }
 
 .background-grey .content-left {
