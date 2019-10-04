@@ -61,31 +61,6 @@
           }
         });
       }
-
-      function changeVideo(width){
-
-        var video = $('#hero--video');
-        var source = $('#hero--video source');
-        
-        if(width > 768){
-          source.attr('src', '/assets/IMG_0542.mov');
-        }else{
-          source.attr('src', '/assets/IMG_0562_MB.mov');
-        }
-        
-        video.load();
-        video.play();
-        
-
-      }
-
-      $(document).ready(function(){
-        changeVideo($(window).width());
-      });
-      $(window).resize(function(){
-        changeVideo($(window).width());
-      });
-
     </script>
   </body>
 </html>
