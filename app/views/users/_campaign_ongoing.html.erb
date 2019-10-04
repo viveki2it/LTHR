@@ -1,11 +1,11 @@
 <!-- Form Start -->    
 <section class="background-grey bg-dark">
+<video class="hero--video" id="hero--video" preload="auto" autoplay="autoplay" muted="muted" loop="loop">
+<source src="">
+</video>
   <div class="container-principal">
     <div class="container-body">
       <div class="content">
-        <video class="hero--video" preload="auto" controls="controls" autoplay="autoplay" muted="muted" loop="loop" width="1920">
-          <source src="/assets/IMG_0542.mov">
-        </video>
         <div class="content-left">
           <div class="formbox formbox-index">
             <p class="form-title white">Enter to win a free LTHR now!</p>
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="content-right">
-          <img src="/assets/group-2.png" srcset="/assets/group-2@2x.png 2x" alt="LTHR" />
+          <!--<img src="/assets/group-2.png" srcset="/assets/group-2@2x.png 2x" alt="LTHR" />-->
         </div>
       </div>
     </div>
@@ -85,6 +85,37 @@
     </div>
   </div>
 </section>
+<section class="description-products">
+	<div class="container-fluid">
+		<div class="container why-better">
+			<div class="row about-lthr">
+				<div class="col-lg-4">
+					<img src="/assets/producto-01.jpg" srcset="/assets/producto-01@2x.jpg 2x">
+					<h2 class="description-title">Lather Pods</h2>
+					<p class="description-content">Never have to worry about running out of lather. Find the delivery schedule that works with your shaving routine and get pods delivered directly to your door which are good for 10-15 shaves.
+					<br><br>Our lather is hand-crafted, paraben-free, sulfate-free, and never tested on animals.
+					</p>
+				</div>
+				<div class="col-lg-4">
+					<img src="/assets/producto-02.jpg" srcset="/assets/producto-02@2x.jpg 2x">
+					<h2 class="description-title">Heating System</h2>
+					<p class="description-content">LTHR takes 3 minutes to get to the ideal temperature alerting you with its integrated lighting system.
+					<br><br>Hot lather dispenses out at 135 degrees and once on your face, stays hot for the entirety of your shave.
+					</p>
+				</div>
+				<div class="col-lg-4">
+					<img src="/assets/producto-03.jpg" srcset="/assets/producto-03@2x.jpg 2x">
+					<h2 class="description-title">Wireless Design</h2>
+					<p class="description-content">Because LTHR is wireless, it’s easy to store and even travel with since its TSA approved.
+					<br><br>One charge lasts for the life time of 1 pods use (10-15 shaves).
+					<br><br>Store it on your vanity or anywhere else in your bathroom and it’s always ready to use. 
+					</p>
+				</div>
+			  </div>
+		</div>
+	</div>
+</section>
+<%= render '/users/faq' %>
 
   <!--<section class="reviews">
   <div class="container-fluid">
@@ -240,3 +271,25 @@
 </section>
 
 <%= render 'video_modal' %>
+
+<script>
+  function changeVideo(width){
+    var video = $('#hero--video');
+    var source = $('#hero--video source');
+    
+    if(width > 768){
+      source.attr('src', '/assets/IMG_0542.mov');
+    }else{
+      source.attr('src', '/assets/IMG_0562_MB.mov');
+    }
+    
+    video.load();
+  }
+
+  $(document).ready(function(){
+    changeVideo($(window).width());
+  });
+  $(window).resize(function(){
+    changeVideo($(window).width());
+  });
+</script>
