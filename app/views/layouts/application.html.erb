@@ -46,5 +46,46 @@
     <!-- Start of  Zendesk Widget script -->
     <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=<%= ENV['ZENDESK_API_KEY'] %>"> </script>
     <!-- End of  Zendesk Widget script -->
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+
+      function changeVideo(width){
+
+        var video = $('#hero--video');
+        var source = $('#hero--video source');
+        
+        if(width > 768){
+          source.attr('src', '/assets/IMG_0542.mov');
+        }else{
+          source.attr('src', '/assets/IMG_0562_MB.mov');
+        }
+        
+        video.load();
+        video.play();
+        
+
+      }
+
+      $(document).ready(function(){
+        changeVideo($(window).width());
+      });
+      $(window).resize(function(){
+        changeVideo($(window).width());
+      });
+
+    </script>
   </body>
 </html>
