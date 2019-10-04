@@ -69,3 +69,5 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'toastr_rails'
 gem 'jquery-rails'
 gem 'split', require: 'split/dashboard'
+#background Jobs
+gem 'sidekiq'

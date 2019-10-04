@@ -60,7 +60,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
-  # config.active_job.queue_adapter     = :resque
+  config.active_job.queue_adapter     = :sidekiq
   # config.active_job.queue_name_prefix = "LTHR_#{Rails.env}"
 
   config.action_mailer.perform_caching = false
@@ -99,7 +99,15 @@ Rails.application.configure do
     #:domain               => 'baci.lindsaar.net',
     :user_name            => ENV['CONFIG_EMAIL'],
     :password             => ENV['CONFIG_PASSWORD'],
-    :authentication       => 'plain',
+    :authentication       => :plain,
     :enable_starttls_auto => true
   }  
+  # ActionMailer::Base.smtp_settings = {
+  #   :port           => ENV['MAILGUN_SMTP_PORT'],
+  #   :address        => ENV['MAILGUN_SMTP_SERVER'],
+  #   :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  #   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  #   :domain         => 'friends.lthrshaving.com',
+  #   :authentication => :plain,
+  # }  
 end

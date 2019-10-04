@@ -310,10 +310,12 @@ header .preorder-now>a {
 
 .content-left {
 	width: 50%;
+	z-index: 9999;
 }
 
 .content-right {
 	width: 50%;
+	z-index: 9999;
 }
 
 .background-grey .content-left {
