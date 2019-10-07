@@ -33,6 +33,7 @@
         <p class="menu-text-right">
           <% if @experiment.eql?('https://lthrshaving.com/cart/28670272012340:1') %>
             <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/28670272012340:1', class: 'btn lima full-width', target: '_blank' %>
+            <span class="product-price"><s>$199.00</s> $149.95</span>
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407041486900:1') %>
             <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407041486900:1', class: 'btn lima full-width', target: '_blank' %>
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407049023540:1') %>
