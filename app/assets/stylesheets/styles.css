@@ -492,6 +492,7 @@ img {
 	width: 100%;
 	max-width: 99px;
 	border-color: transparent;
+	max-height: 50px;
 }
 
 .formbox .lima:hover {
@@ -657,6 +658,7 @@ img {
 	max-width: 360px;
 	border-radius: 0 6px 6px 0;
 	margin-bottom: 30px;
+	height: 50px;
 }
 
 .come-inside .formbox .full-width {
