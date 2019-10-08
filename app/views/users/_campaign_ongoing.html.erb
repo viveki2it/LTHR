@@ -257,7 +257,9 @@
               <%= f.text_field :email, :placeholder => "Email", class: 'form--f--input' %>
               <input class="btn lima full-width" type="submit" value="Come Inside & Be The First To Know" />
             <% end %>
-
+            <div class="text-center">
+              <%= link_to 'Privacy & Terms', privacy_policy_path, target: '_blank', class: "privacy-link" %>
+            </div>
           </div>
         </div>
       </div>

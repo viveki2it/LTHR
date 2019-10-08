@@ -38,7 +38,7 @@
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407049023540:1') %>
             <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407049023540:1', class: 'btn lima full-width', target: '_blank' %>
           <% end %>
-          <% if  ['show', 'refer'].include?(params[:action]) %>
+          <% if  ['show', 'refer', 'policy'].include?(params[:action]) %>
             <span class="product-price"><s>$199.00</s> $149.95</span>
           <% end %>
         </p>
