@@ -1,5 +1,11 @@
 # Export to CSV with the referrer_id
 ActiveAdmin.register User do
+  filter :id
+  filter :email
+  filter :referral_code
+  filter :created_at
+  filter :updated_at
+
   csv do
     column :id
     column :email
