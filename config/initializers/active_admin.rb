@@ -313,3 +313,10 @@ ActiveAdmin.setup do |config|
   #
   # config.order_clause = MyOrderClause
 end
+
+ActiveAdmin::BaseController.class_eval do
+  # Allow ActiveAdmin admins to freely mass-assign when using strong_parameters
+  def resource_params
+    [(params[resource_request_name] || params[resource_instance_name]).try(:permit!) || {}]
+  end  
+end

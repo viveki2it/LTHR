@@ -18,7 +18,7 @@ ActiveAdmin.register User do
     column :updated_at
   end
 
-  actions :index, :show, :destroy
+  actions :index, :edit, :show, :destroy, :update
   
   index download_links: [:csv] do
     column :id
