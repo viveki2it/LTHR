@@ -856,9 +856,9 @@ img {
 }
 
 @media (max-width:374px) {
-	/* header .logo {
+	header .logo {
 		max-width: 90px;
-	} */
+	}
 
 	header .menu-text-right .lima {
 		font-size: 11px;
@@ -1152,5 +1152,14 @@ h2.accordion.active:after{
 @media(max-width:475px){
   .accordion:not(h2){
     letter-spacing:2px;
-  }
+	}
+	header .logo {
+		max-width: 90px;
+	}	
+}
+
+@media (max-width:320px) {
+	header .logo {
+		max-width: 80px;
+	}
 }
