@@ -226,7 +226,7 @@ header .preorder-now>a {
 
 .logo {
 	width: 100%;
-	max-width: 100px;
+	/* max-width: 100px; */
 	display: inline-block;
 }
 
@@ -856,9 +856,9 @@ img {
 }
 
 @media (max-width:374px) {
-	header .logo {
+	/* header .logo {
 		max-width: 90px;
-	}
+	} */
 
 	header .menu-text-right .lima {
 		font-size: 11px;
