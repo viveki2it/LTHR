@@ -1146,3 +1146,11 @@ h2.accordion.active:after{
     font-weight: 600;
     line-height: 1.21;      
 }
+.accordion:not(h2){
+  padding: 18px 40px 18px 0px;
+}
+@media(max-width:475px){
+  .accordion:not(h2){
+    letter-spacing:2px;
+  }
+}
