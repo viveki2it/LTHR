@@ -30,10 +30,23 @@ ActiveAdmin.register User do
     end
     column :created_at
     column :updated_at
-    column "Referral Link" do |user|
+    column "View Referrals" do |user|
       link_to("Link", user.user_url(root_url), target: '_blank')
     end    
     actions
   end
+
+  form do |f|
+    f.inputs "Details" do
+      f.input :email
+      if f.object.new_record?
+        f.input :referrer_id, as: :select, collection: User.all.map {|user| [user.email, user.id]}
+      else
+        f.input :referrer_id, as: :select, collection: User.all.map {|user| [user.email, user.id]}, selected: f.object.referrer_id
+      end
+      f.input :referral_code, as: :hidden
+    end
+    f.actions
+  end  
 
 end
