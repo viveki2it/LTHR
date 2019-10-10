@@ -237,6 +237,14 @@ header .preorder-now>a {
 	margin-bottom: 0px;
 	display: inline-block;
 	width: calc(100% - 106px);
+	position: absolute;
+	right: 40px;
+	top: 50%;
+	transform: translateY(-50%);	
+}
+
+.header-preorder{
+	position: relative;
 }
 
 .play-action {
