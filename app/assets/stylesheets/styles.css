@@ -1174,3 +1174,12 @@ h2.accordion.active:after{
 		max-height:50px;
 	}
 }
+
+@media(max-width:991px){
+	.description-products .about-lthr .col-md-4:not( :last-child) {
+		margin-bottom: 40px;
+	}
+	.description-products .about-lthr .description-title{
+		margin: 20px 0px 15px;
+	}
+}
