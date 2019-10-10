@@ -866,6 +866,7 @@ img {
 @media (max-width:374px) {
 	header .logo {
 		max-width: 90px;
+		max-height:50px;
 	}
 
 	header .menu-text-right .lima {
@@ -1163,11 +1164,13 @@ h2.accordion.active:after{
 	}
 	header .logo {
 		max-width: 90px;
+		max-height:50px;
 	}	
 }
 
 @media (max-width:320px) {
 	header .logo {
 		max-width: 80px;
+		max-height:50px;
 	}
 }
