@@ -71,3 +71,4 @@ gem 'jquery-rails'
 gem 'split', require: 'split/dashboard'
 #background Jobs
 gem 'sidekiq'
+gem 'newrelic_rpm'
