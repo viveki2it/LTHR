@@ -3,6 +3,7 @@ ActiveAdmin.register User do
   filter :id
   filter :email
   filter :referral_code
+  filter :referrer_id
   filter :created_at
   filter :updated_at
 
