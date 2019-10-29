@@ -43,7 +43,6 @@
       </header>
     </section>   
     <%= yield %>
-    <div id="log"></div>
     <%= render 'toastr_rails/flash' %>
     <!-- Start of  Zendesk Widget script -->
     <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=<%= ENV['ZENDESK_API_KEY'] %>"> </script>

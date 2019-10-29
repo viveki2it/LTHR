@@ -86,8 +86,6 @@ body {
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    position:relative;
-		padding:20px 0px;
 }
 @media(max-width:1110px){
 .hero--video {
@@ -1220,13 +1218,3 @@ h2.accordion.active:after{
 		 margin-bottom: 40px;
 	 }
  }
-
- .hero--video {
-	left: inherit !important;
-	top: 0% !important;
-	right: 0% !important;
-	overflow: hidden;
-	-webkit-transform:none;
-	-ms-transform:none;
-	transform:none;
-}
