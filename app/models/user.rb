@@ -3,7 +3,7 @@ class User < ApplicationRecord
   has_many :referrals, class_name: 'User', foreign_key: 'referrer_id'
 
   validates :email, presence: true, :uniqueness => {:case_sensitive => false, :message => "Email is already taken"}
-  validates :email, 'valid_email_2/email': { mx: true, disposable: true, message: "is not a valid email. Please enter valid email" }
+  #validates :email, 'valid_email_2/email': { mx: true, disposable: true, message: "is not a valid email. Please enter valid email" }
   validates :referral_code, uniqueness: true
   validate :verify_email
 
@@ -15,11 +15,14 @@ class User < ApplicationRecord
   end
   
   def verify_email
-    if self.valid?
+    address = ValidEmail2::Address.new(self.email)
+    if address.valid? && address.valid_mx?
       mailgun_validate = get_validate(self.email)
       unless mailgun_validate.dig('result').eql?('deliverable')
-        errors.add(:email, "is not a valid email. Please enter valid email")        
+        errors.add(:email, "is not a valid email. Please enter valid email")
       end
+    else
+      errors.add(:email, "is not a valid email. Please enter valid email")
     end
   end
   
