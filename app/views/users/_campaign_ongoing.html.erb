@@ -282,9 +282,8 @@
       video.attr('poster', '/assets/poster-video-mb-2.jpg');
       source.attr('src', '/assets/IMG_0562_MB.mov');
     }
-    
     video.load();
-    $('#hero--video')[0].play();
+    $('#hero--video')[0].cloneNode(true).play();
   }
 
   $(document).ready(function(){
