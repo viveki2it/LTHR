@@ -106,6 +106,35 @@ body {
 		z-index: 9;
 		position: relative;
 	}
+	.background-grey.bg-dark.fixedipad .formbox .form-title {
+		font-size: 26px;
+		letter-spacing: 4px;
+		color: #3d3d3d;
+		margin-bottom: 10px;
+	}
+	.background-grey.bg-dark.fixedipad .formbox .form-subtitle {
+		font-size: 18px;
+		letter-spacing: 1px;
+		color: #ffffff;
+		text-align: left;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+	}
+	.background-grey.bg-dark.fixedipad .formbox form input {
+		border-radius: 6px;
+		width: 100%;
+		display: block;
+		max-width: none;
+		margin-bottom: 12px;
+		padding: 10px;
+		font-size: 12px;
+	}
+	.background-grey.bg-dark.fixedipad .play-action img {
+		max-width: 40px;
+		padding: 5px;
+		padding-left: 0px;
+	}
+	
 }
 
 @media(max-width:1110px){
