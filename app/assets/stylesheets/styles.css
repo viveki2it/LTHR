@@ -168,7 +168,7 @@ body {
 	}
 	.background-grey.bg-dark .container-principal{
 		position: absolute;
-		bottom: 40px;
+		bottom: 80px;
 		left: 15px;
 		width: calc(100% - 30px);
 	}
