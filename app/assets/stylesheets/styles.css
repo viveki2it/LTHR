@@ -87,6 +87,23 @@ body {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
+
+.background-grey.bg-dark.fixedipad{
+	padding: 40px 20px !important;
+	
+}
+.background-grey.bg-dark.fixedipad video.hero--video{
+	left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    transform: none !important;
+    z-index: 0;
+}
+.background-grey.bg-dark.fixedipad .container-principal{
+	z-index: 9;
+    position: relative;
+}
+
 @media(max-width:1110px){
 .hero--video {
     left:inherit !important;
