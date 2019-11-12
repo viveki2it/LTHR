@@ -1,5 +1,5 @@
 <!-- Form Start -->    
-<section class="background-grey bg-dark">
+<section id="hero" class="background-grey bg-dark">
 <video class="hero--video" id="hero--video" preload="auto" autoplay="autoplay" muted="muted" loop="loop">
 <source src="">
 </video>
@@ -382,7 +382,14 @@
     debug += 'navigator.platform = ' + navigator.platform + '<br/>';
     debug += 'navigator.vendor = ' + navigator.vendor + '<br/>';
     
-    document.getElementById('log').innerHTML = debug;
+    if(e.os.name == "iPad" && parseFloat(e.os.version) < 11 ){
+	
+		var element = document.getElementById("hero");
+		element.classList.toggle("fixedipad");
+	}
+	
+	document.getElementById('log').innerHTML = debug;
+	
 }());
 
 </script>
