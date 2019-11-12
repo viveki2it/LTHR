@@ -784,7 +784,7 @@ img {
 		margin-left: 15px;
 	}
 }
-@media (min-width:600px) and max-width(768px){
+@media (min-width:600px) and (max-width:768px){
 	.background-grey.bg-dark.fixedipad .formbox.formbox-index {
 		margin-left: 50px;
 	}
