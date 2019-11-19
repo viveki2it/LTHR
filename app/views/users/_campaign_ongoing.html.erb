@@ -12,7 +12,7 @@
             <p class="form-subtitle"> Elevate Your Shaving Routine</p>
             <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-body"} do |f| %>
               <%= f.text_field :email, :placeholder => "Email" %>
-              <input class="btn lima" type="submit" value="Come Inside & Be The First To Know" />
+              <input class="btn lima" type="submit" value="Come Inside & Get 25% Off Your Preorder" />
             <% end %>
             <div class="play-action">
               <a href="javascript: void(0);" class="play">
@@ -255,7 +255,7 @@
 
             <%= form_for @user, :url => { :action => "create" }, :html => {:class => "form-body"} do |f| %>
               <%= f.text_field :email, :placeholder => "Email", class: 'form--f--input' %>
-              <input class="btn lima full-width" type="submit" value="Come Inside & Be The First To Know" />
+              <input class="btn lima full-width" type="submit" value="Come Inside & Get 25% Off Your Preorder" />
             <% end %>
             <div class="text-center">
               <%= link_to 'Privacy & Terms', privacy_policy_path, target: '_blank', class: "privacy-link" %> |
