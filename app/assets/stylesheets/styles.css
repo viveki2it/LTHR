@@ -1156,15 +1156,13 @@ h2.accordion:after {
   transition: 0.4s;
 }
 h2.accordion.active:after{
-          -webkit-transform:rotate(135deg);
-          -ms-transform:rotate(135deg);
+  -webkit-transform:rotate(135deg);
+      -ms-transform:rotate(135deg);
           transform:rotate(135deg);
-          top:0px;
-          -webkit-transition: 0.4s;
-          -o-transition: 0.4s;
-          transition: 0.4s;
-          -moz-transform:rotate(135deg);
-          -o-transform:rotate(135deg);
+  top:0px;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 .accordion:not(h2):after {
 	content: "";
@@ -1223,11 +1221,6 @@ h2.accordion.active:after{
 	font-size:14px;
 	line-height:1.71;
 	margin: 20px 0px;
-}
-.qty-preorder{
-	padding: 10px;
-    margin-left: 10px;
-    outline: none;
 }
 .product-price{
 	margin-left:20px;

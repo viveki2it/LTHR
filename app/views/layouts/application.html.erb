@@ -47,12 +47,13 @@
         <img class="logo" src="/assets/logo.png" alt="LTHR"/>
         <p class="menu-text-right">
           <% if @experiment.eql?('https://lthrshaving.com/cart/28670272012340:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/28670272012340:1', class: 'btn lima full-width preorder' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/28670272012340:1', class: 'btn lima full-width' %>
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407041486900:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407041486900:1', class: 'btn lima full-width preorder' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407041486900:1', class: 'btn lima full-width' %>
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407049023540:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407049023540:1', class: 'btn lima full-width preorder' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407049023540:1', class: 'btn lima full-width' %>
           <% end %>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <br>
           <select class="qty-preorder">
@@ -63,6 +64,8 @@
             <option value="2">2</option>
             <option value="3">3</option>
           </select>-->
+=======
+>>>>>>> parent of 43c195f... add preorder qty selector
           <span class="product-price"><s>$199.00</s> $149.95</span>
         </p>
       </header>
@@ -87,16 +90,6 @@
           }
         });
       }
-    </script>
-    <script>
-    $(document).ready(function(){
-      $('.qty-preorder').change(function(){
-        var href = $('.preorder').attr('href');
-        href = href.substring(0, href.length - 1);
-        href += $(this).val();
-        $('.preorder').attr('href' , href);
-      });
-    });
     </script>
   </body>
 </html>
