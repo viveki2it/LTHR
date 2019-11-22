@@ -1232,6 +1232,9 @@ h2.accordion.active:after{
 .product-price{
 	margin-left:20px;
 }
+.menu-text-right br{
+	display:none;
+}
 @media(max-width:510px){
 	.header-preorder{
 	  display: flex;
