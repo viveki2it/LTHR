@@ -928,6 +928,29 @@ img {
 		margin: 0 auto;
 	}
 }
+@media (max-width: 424px){
+	.qty-preorder{
+	  display: block;
+	  max-width: 60px;
+	  float: right;
+	  margin-top: 5px;
+	}
+	.product-price{
+	  float: right;  
+	}
+	.header-preorder br{
+	  display:block;
+	}
+	.menu-text-right{
+	  position:relative;
+	  right: inherit;
+	  top:inherit;
+	  transform: none
+	}
+	.header-preorder{
+	  padding: 15px 20px;
+	}
+  }
 
 @media (max-width:374px) {
 	header .logo {
@@ -941,6 +964,15 @@ img {
 		letter-spacing: 1px;
 		max-width: 120px;
 	}
+
+	header .menu-text-right .lima.preorder{
+		width:167px;
+		max-width: none;
+	}
+
+	.qty-preorder{
+		padding:5px 10px
+	  }
 
 	.background-grey .formbox .form-title {
 		font-size: 24px;
@@ -1204,6 +1236,9 @@ h2.accordion.active:after{
 	.header-preorder{
 	  display: flex;
 	  flex-direction: row;
+	  -webkit-box-pack: justify;
+    	-ms-flex-pack: justify;
+		justify-content: space-between;
 	}
 	.product-price{
 	  display:block;
