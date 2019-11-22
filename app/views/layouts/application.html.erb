@@ -45,29 +45,31 @@
     <section class="header">
       <header class="header-preorder">
         <img class="logo" src="/assets/logo.png" alt="LTHR"/>
-        <p class="menu-text-right">
+        <div class="menu-text-right">
           <% if @experiment.eql?('https://lthrshaving.com/cart/28670272012340:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/28670272012340:1', class: 'btn lima full-width' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/28670272012340:1', class: 'btn lima full-width preorder' %>
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407041486900:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407041486900:1', class: 'btn lima full-width' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407041486900:1', class: 'btn lima full-width preorder' %>
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407049023540:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407049023540:1', class: 'btn lima full-width' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407049023540:1', class: 'btn lima full-width preorder' %>
           <% end %>
-         <select class="qty-preorder">
-            <option value="1" selected>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
+          <div class="custom-select">
+            <select class="qty-preorder">
+              <option value="1" selected="">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
  
           <span class="product-price"><s>$199.00</s> $149.95</span>
-        </p>
+        </div>
       </header>
     </section>   
     <%= yield %>
