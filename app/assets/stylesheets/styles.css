@@ -1351,6 +1351,10 @@ h2.accordion.active:after{
 	user-select: none;
 	color:#333;
   }
+
+	.select-items div{
+		padding: 5px 10px;
+	}
   
   /*style items (options):*/
   .select-items {
