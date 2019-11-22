@@ -889,11 +889,7 @@ img {
 	outline: none;
 	margin-left:10px;
 }
-@media(max-width:600px){
-	.custom-select{
-		display:none;
-	}
-}
+
 @media(min-width:1200px) {
 	.col-lg-3.col-small {
 		width: 20% !important;
@@ -1378,4 +1374,9 @@ h2.accordion.active:after{
 	background-color: rgba(0, 0, 0, 0.1);
   }
 
+  @media(max-width:600px){
+		.custom-select{
+			display:none;
+		}
+	}
   /* end custom select */
