@@ -47,11 +47,11 @@
         <img class="logo" src="/assets/logo.png" alt="LTHR"/>
         <div class="menu-text-right">
           <% if @experiment.eql?('https://lthrshaving.com/cart/28670272012340:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/28670272012340:1', class: 'btn lima full-width preorder' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/28670272012340:1?utm_campaign=&utm_medium=preorder&utm_source=heroku', class: 'btn lima full-width preorder' %>
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407041486900:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407041486900:1', class: 'btn lima full-width preorder' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407041486900:1?utm_campaign=&utm_medium=preorder&utm_source=heroku', class: 'btn lima full-width preorder' %>
           <% elsif @experiment.eql?('https://lthrshaving.com/cart/29407049023540:1') %>
-            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407049023540:1', class: 'btn lima full-width preorder' %>
+            <%= link_to 'PRE-ORDER NOW', 'https://lthrshaving.com/cart/29407049023540:1?utm_campaign=&utm_medium=preorder&utm_source=heroku', class: 'btn lima full-width preorder' %>
           <% end %>
           <div class="custom-select">
             <select class="qty-preorder">
