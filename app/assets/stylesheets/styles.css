@@ -302,7 +302,7 @@ header .preorder-now>a {
 
 .header-preorder{
 	position: relative;
-	z-index: 9;
+	z-index: 9999;
 }
 
 .play-action {
@@ -381,7 +381,7 @@ header .preorder-now>a {
 
 .content-right {
 	width: 50%;
-	z-index: 9999;
+	z-index: 99;
 }
 
 .background-grey .content-left {
@@ -1360,7 +1360,7 @@ h2.accordion.active:after{
 	top: 100%;
 	left: 0;
 	right: 0;
-	z-index: 99;
+	z-index: 9999;
 	border: 1px solid;
 	
   }
