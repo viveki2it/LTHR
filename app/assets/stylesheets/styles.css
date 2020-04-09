@@ -302,6 +302,7 @@ header .preorder-now>a {
 
 .header-preorder{
 	position: relative;
+	z-index: 9999;
 }
 
 .play-action {
@@ -380,7 +381,7 @@ header .preorder-now>a {
 
 .content-right {
 	width: 50%;
-	z-index: 9999;
+	z-index: 99;
 }
 
 .background-grey .content-left {
@@ -883,6 +884,12 @@ img {
 	left: 0;
 }
 
+.qty-preorder{
+	padding: 10px;
+	outline: none;
+	margin-left:10px;
+}
+
 @media(min-width:1200px) {
 	.col-lg-3.col-small {
 		width: 20% !important;
@@ -928,6 +935,7 @@ img {
 		margin: 0 auto;
 	}
 }
+
 
 @media (max-width:374px) {
 	header .logo {
@@ -1193,10 +1201,16 @@ h2.accordion.active:after{
 .product-price{
 	margin-left:20px;
 }
+.menu-text-right br{
+	display:none;
+}
 @media(max-width:510px){
 	.header-preorder{
 	  display: flex;
 	  flex-direction: row;
+	  -webkit-box-pack: justify;
+    	-ms-flex-pack: justify;
+		justify-content: space-between;
 	}
 	.product-price{
 	  display:block;
@@ -1285,3 +1299,84 @@ h2.accordion.active:after{
 		 margin-bottom: 40px;
 	 }
  }
+
+/* custom select */
+.custom-select {
+	position: relative;
+	line-height: normal;
+	width: 100%;
+	max-width: 60px;
+	margin-left: 10px;
+	display:inline-block;
+	text-align: left;
+	border: 1px solid;
+  }
+  .custom-select select {
+	display: none !important; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+	background-color: #fff;
+	color:#333;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+	position: absolute;
+	content: "";
+	top: 15px;
+	right: 10px;
+	width: 8px;
+	height: 8px;
+	transform:rotate(45deg);
+	border-bottom: 2px solid #636769;
+	border-right: 2px solid #636769;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+	transform:rotate(-135deg);
+	top: 18px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+	padding: 10px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	user-select: none;
+	color:#333;
+  }
+
+	.select-items div{
+		padding: 5px 10px;
+	}
+  
+  /*style items (options):*/
+  .select-items {
+	position: absolute;
+	background-color: #fff;
+	color:#333;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	border: 1px solid;
+	
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+	display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+	background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  @media(max-width:990px){
+		.custom-select{
+			display:none;
+		}
+	}
+  /* end custom select */
