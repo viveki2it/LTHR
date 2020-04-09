@@ -3,9 +3,9 @@ class User < ApplicationRecord
   has_many :referrals, class_name: 'User', foreign_key: 'referrer_id'
 
   validates :email, presence: true, :uniqueness => {:case_sensitive => false, :message => "Email is already taken"}
-  #validates :email, 'valid_email_2/email': { mx: true, disposable: true, message: "is not a valid email. Please enter valid email" }
+  validates :email, 'valid_email_2/email': { mx: true, disposable: true, message: "is not a valid email. Please enter valid email" }
   validates :referral_code, uniqueness: true
-  validate :verify_email
+  # validate :verify_email
 
   before_create :create_referral_code
   after_create :send_welcome_email
